@@ -7,7 +7,13 @@
   </div>
   <h4> Rooms </h4>
   <%= turbo_stream_from 'rooms' %>
-    <div id="rooms">
+  <div id="rooms">
     <%= render @rooms %>
+  </div>
+  <%= render "layouts/new_room_form" %>
+  <div>
+    <%= if @single_room %>
+      <h4><%= single_room.name %></h4>
+    <% end %>
   </div>
 </div>
