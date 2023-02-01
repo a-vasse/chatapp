@@ -1,0 +1,2 @@
+class TurboDeviseController < ApplicationController
+end
