@@ -1,0 +1,23 @@
+.side-navbar {
+  padding:12px;
+  width:25%;
+}
+
+.column-title {
+  box-sizing: border-box;
+  text-align: center;
+  padding:8px;
+  background:darkgray;
+  color:white;
+  width: 100%;
+}
+
+.side-link a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s
+}
+
+.side-link a:hover {
+  color: darkgrey;
+}

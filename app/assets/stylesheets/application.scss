@@ -18,12 +18,33 @@
 @import "components/landing-left";
 @import "components/landing-right";
 @import "components/login-page";
+@import "components/messages";
+@import "components/side-navpage";
+@import "components/buttons";
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  overflow: hidden;
 }
 
 .landing {
   display: flex;
   height: 94vh;
+}
+
+.message-room-container {
+  display:flex;
+  height: 94vh;
+}
+
+.form-box {
+  display:flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.input-box {
+  width: 100%;
 }

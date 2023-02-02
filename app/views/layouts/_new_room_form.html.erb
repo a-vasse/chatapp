@@ -1,4 +1,6 @@
 <%= form_with(model: @room, remote: true) do |f| %>
-  <%= f.text_field :name, class: 'form-control', autocomplete: 'off' %>
-  <%= f.submit data: {disable_with: false} %>
+  <div class="form-box">
+    <%= f.text_field :name, class: 'form-control', autocomplete: 'off', class:"input-box"  %>
+    <%= f.submit data: {disable_with: false}, class:"select-button" %>
+  </div>
 <% end %>
