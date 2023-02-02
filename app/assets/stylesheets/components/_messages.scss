@@ -2,40 +2,44 @@
   padding: 12px;
   width:75%;
   border-left: 2px solid grey;
-
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-// #single-room {
-//   height: calc(100vh - 150px);
-//   overflow-y: scroll;
-//   overflow-x: hidden;
-// }
+#single-room {
+  height: calc(100vh - 150px);
+}
 
-// #messages {
-//   height: calc(100vh - 150px);
-//   overflow-y: scroll;
-//   overflow-x: hidden;
-// }
+#messages {
+  height: calc(94vh - 150px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 
-// #room-container {
-//   height: 100vh;
-//   margin-right: 0px !important;
-// }
+#room-container {
+  height: 100vh;
+  margin-right: 0px !important;
+}
 
-// #chatroom-container {
-//   height: 100vh ;
-//   margin-right: 0px !important;
-//   overflow-y: scroll;
-//   overflow-x: hidden;
-// }
+#chatroom-container {
+  height: 100vh ;
+  margin-right: 0px !important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
-// .msg-content {
-//   width: 80%;
-//   margin-right: 5px;
-// }
+.msg-content {
+  width: 80%;
+  margin-right: 5px;
+}
 
-// .message-box {
-//   word-wrap: break-word;
-//   width: fit-content;
-//   max-width: 40&
-// }
+.message-box {
+  word-wrap: break-word;
+  width: fit-content;
+  max-width: 40%;
+  border-radius: 0.5rem;
+  margin-bottom: 12px;
+  background-color: darkgrey;
+  color: white;
+  padding: 12px;
+}
