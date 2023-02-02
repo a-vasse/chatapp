@@ -1,0 +1,47 @@
+.session-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-box {
+  padding: 18px 24px 18px 24px;
+  border-radius: 1rem;
+  border: 2px solid grey;
+  background-color: rgb(243, 243, 243);
+}
+
+.forgot-pw {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-pw a {
+  text-decoration: none;
+  font-style: italic;
+  font-size: smaller;
+  margin-bottom: 1rem;
+  color: gray;
+}
+
+.field {
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.log-in {
+  flex-grow: 1;
+}
+
+.actions {
+  display:flex;
+}
+
+.heading {
+  text-align: center;
+}
+
+.enter-field {
+  width: 95%;
+}

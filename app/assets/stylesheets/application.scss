@@ -13,9 +13,17 @@
  *= require_tree .
  *= require_self
  */
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import "components/navbar";
-
+@import "components/landing-left";
+@import "components/landing-right";
+@import "components/login-page";
 body {
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
+}
+
+.landing {
+  display: flex;
+  height: 94vh;
 }

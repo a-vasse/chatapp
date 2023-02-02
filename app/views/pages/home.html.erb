@@ -1,3 +1,13 @@
-<%= link_to "Login", new_user_session_path %>
-<%= link_to "Sign Up", new_user_registration_path %>
-
+<div class="landing">
+  <div class="welcome">
+    <div class="introduction">
+      <p>Direct messaging and chat room application to keep in contact with your team.
+    </div>
+  </div>
+  <div class="sign-in">
+    <div class="sign-in-box">
+      <%= link_to "Login", new_user_session_path, class:"nav-link" %>
+      <%= link_to "Sign Up", new_user_registration_path, class:"nav-link"  %>
+    </div>
+  </div>
+</div>

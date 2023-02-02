@@ -1,8 +1,50 @@
 .navbar {
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
-  background-color: rgb(143, 143, 143);
+  background-color: lightgrey;
+  justify-content: space-between;
  }
 
- .nav-button
+ .nav-username {
+  margin-left: 12px;
+  color:black;
+ }
+
+ .nav-link {
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: darkgray;
+  margin: 12px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+ }
+
+ .nav-link:hover {
+  background-color: grey;
+ }
+
+ .nav-button {
+  height: 40px;
+  border-radius: 0.5rem;
+  background-color: darkgray;
+  margin: 12px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+ }
+
+ .nav-button:hover {
+  background-color: grey;
+ }
