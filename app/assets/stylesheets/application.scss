@@ -14,7 +14,8 @@
  *= require_self
  */
 
- .navbar {
-  display: flex;
-  background-color: aqua;
- }
+@import "components/navbar";
+
+body {
+  margin: 0;
+}
