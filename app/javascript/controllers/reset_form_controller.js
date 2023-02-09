@@ -1,4 +1,4 @@
-import { controller } from "@hotwire/stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   reset() {
