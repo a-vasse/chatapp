@@ -3,8 +3,11 @@
     <% if current_user %>
       <span class="nav-username">
         Welcome, <%= current_user.email %>
-    </span>
-      <%= button_to "Logout", destroy_user_session_path, class:"nav-button", method: :delete %>
+      </span>
+      <div class="right-side">
+        <%= link_to "Edit Account", edit_user_registration_path, class:"nav-link" %>
+        <%= button_to "Logout", destroy_user_session_path, class:"nav-button", method: :delete %>
+      </div>
     <% else %>
       <%= link_to "Login", new_user_session_path, class:"nav-link" %>
       <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>

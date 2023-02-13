@@ -4,11 +4,15 @@
   align-items: center;
   background-color: lightgrey;
   justify-content: space-between;
- }
+}
 
- .nav-username {
+.nav-username {
   margin-left: 12px;
   color: white;
   background-color: darkgray;
   padding: 12px;
- }
+}
+
+.right-side {
+  display: flex;
+}
