@@ -1,11 +1,19 @@
 <header>
   <nav class="navbar">
     <% if current_user %>
-      <span class="nav-username">
-        Welcome, <%= current_user.email %>
-      </span>
-      <div class="right-side">
-        <%= image_tag(current_user.chat_avatar, class: 'avatar') %>
+      <div class="bar-group">
+          <div class="status-container">
+          <%= link_to image_tag(current_user.chat_avatar, class: 'avatar'), current_user %>
+          <%= turbo_stream_from "user_status" %>
+          <div>
+            <%= render "users/status", user: current_user %>
+          </div>
+        </div>
+        <span class="nav-username">
+          Welcome, <%= current_user.email %>
+        </span>
+      </div>
+      <div class="bar-group">
         <%= link_to "Edit Account", edit_user_registration_path, class:"nav-link" %>
         <%= button_to "Logout", destroy_user_session_path, class:"nav-button", method: :delete %>
       </div>

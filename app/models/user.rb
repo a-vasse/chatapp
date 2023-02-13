@@ -33,7 +33,7 @@ class User < ApplicationRecord
     when 'offline'
       'status-offline'
     else
-      'status-else'
+      'status-offline'
     end
   end
 

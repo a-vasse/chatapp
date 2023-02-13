@@ -9,11 +9,13 @@
 .nav-username {
   margin-left: 12px;
   color: white;
-  background-color: darkgray;
+  background-color: rgb(0, 135, 255);
   padding: 12px;
+  border-radius: 0.5rem;
 }
 
-.right-side {
+.bar-group {
   display: flex;
   align-items: center;
+  margin-left: 12px;
 }
