@@ -26,22 +26,4 @@
   color: darkgrey;
 }
 
-.side-user {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
 
-.username {
-  overflow: hidden;
-}
-
-.side-user a {
-  text-decoration: none;
-  color: black;
-  transition: 0.3s
-}
-
-.side-user a:hover {
-  color: darkgrey;
-}

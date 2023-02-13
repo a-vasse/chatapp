@@ -1,0 +1,59 @@
+.username {
+  overflow: hidden;
+}
+
+.side-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.side-user a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s
+}
+
+.side-user a:hover {
+  color: darkgrey;
+}
+
+.status-container {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: grey;
+  border: 2px solid white;
+  bottom: 8px;
+  right: 8px;
+  position: absolute;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.status-offline {
+  background-color: darkgrey;
+}
+
+.status-online {
+  background-color: green;
+}
+
+.status-away {
+  background-color: orange;
+}
+
+.status-else {
+  background-color: darkgray;
+}
