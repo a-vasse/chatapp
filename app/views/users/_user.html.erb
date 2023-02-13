@@ -1,3 +1,11 @@
-<div class="selectable side-link">
-<%= link_to user.email, user %>
-</div>
+<% if @single_room && single_room.participant?(@single_room, user) %>
+  <% isActive = 'Active' %>
+<% else %>
+  <% isActive = '' %>
+<% end %>
+<li>
+  <div>
+    <%= link_to image_tag(user.chat_avatar, class: 'chat_pfp'), user %>
+  </div>
+  <% link_to user.email, user, class:'username', data: {turbo: 'false'} %>
+</li>
