@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     resources :messages
   end
   root 'pages#home'
-  devise_for :users
+  devise_for :users, controllers: {
+    session: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   devise_scope :user do
     get 'users', to: 'devise/sessions#new'
   end
