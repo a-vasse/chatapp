@@ -13,10 +13,6 @@ class User < ApplicationRecord
 
   attr_accessor :current_password
 
-  def avatar_thumbnail
-    avatar.variant(resize_to_limit: [150, 150]).processed
-  end
-
   def chat_avatar
     avatar.variant(resize_to_limit: [50, 50]).processed
   end

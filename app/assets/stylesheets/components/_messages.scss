@@ -34,6 +34,7 @@
 }
 
 .message-box {
+  display: flex;
   word-wrap: break-word;
   width: fit-content;
   max-width: 40%;
@@ -50,11 +51,7 @@
   border-bottom: 1px solid #555555;
 }
 
-.username {
-  overflow: hidden;
-}
-
-.chat_pfp {
+.avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -71,13 +68,12 @@
 }
 
 .name {
-  margin-top: 15px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  font-weight: bolder;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .time {
-  padding-top: 0px;
+  font-size: small;
   margin-top: 0px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
 }
