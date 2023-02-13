@@ -1,11 +1,15 @@
 <% if @single_room && @single_room.participant?(@single_room, user) %>
-  <% isActive = 'Active' %>
+  <% isActive = 'active' %>
 <% else %>
   <% isActive = '' %>
 <% end %>
-<div class="side-user">
-  <div>
+<div class="side-user <%= isActive %>">
+  <div class="status-container">
     <%= link_to image_tag(user.chat_avatar, class: 'avatar'), user %>
+    <%= turbo_stream_from "user_status" %>
+    <div>
+      <%= render "users/status", user: user %>
+    </div>
   </div>
   <%= link_to user.email, user, class:'username', data: {turbo: 'false'} %>
 </div>
