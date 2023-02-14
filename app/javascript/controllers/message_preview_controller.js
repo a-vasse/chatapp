@@ -103,4 +103,26 @@ export default class extends Controller {
     element.appendChild(cancelUploadButton);
     return element;
   }
+
+  /* remove selected preview element */
+  removePreview(event) {
+    const target = event.target.parentNode.closest(".attachment-preview");
+    const dataTransfer = new DataTransfer();
+    let fileInput = document.getElementById("message_attachments");
+    let files = fileInput.files;
+    let filesArray = Array.from(files);
+
+    filesArray = filesArray.filter((file) => {
+      let filename = target.dataset.filename;
+      return file.name !== filename;
+    });
+    target.parentNode.removeChild(target);
+    filesArray.forEach((file) => dataTransfer.items.add(file));
+    fileInput.files = dataTransfer.files;
+  }
+
+  /* clear all preview elements after submit */
+  clearPreviews() {
+    document.getElementById("attachment-previews").innerHTML = "";
+  }
 }

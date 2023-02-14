@@ -10,9 +10,9 @@
           <label for='message_attachments'>
             <i class="upload-button">+</i>
           </label>
-          <% f.file_field(:attachments, multiple: true, data:{controller: "message-preview", action: "change->message-preview#preview"}) %>
+          <% f.file_field(:attachments, multiple: true, data:{controller: "message-preview", action:"change->message-preview#preview"}) %>
         </div>
-      <%= f.submit "Send", data: {disable_with: false, controller: "messages-preview", action: "click->message-preview#clearPreviews"}, class: "select-button" %>
+      <%= f.submit "Send", data: {disable_with: false, controller: "message-preview", action: "click->message-preview#clearPreviews"}, class: "select-button" %>
     </div>
   <% end %>
 </div>
