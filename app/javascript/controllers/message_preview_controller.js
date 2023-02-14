@@ -39,6 +39,27 @@ export default class extends Controller {
   createImageElement(cancelFunction, reader) {
     let cancelUploadButton, element;
     const image = document.createElement("img");
-    
+    image.setAttribute("style", "background-image: url(" + reader.result + ")");
+    image.classList.add("preview-image");
+    element = document.createElement("div");
+    element.classList.add("attachment-image-container", "file-removal");
+    element.appendChild(image);
+    cancelUploadButton = document.createElement("i");
+    cancelUploadButton.classList.add("cancel-upload-button");
+    cancelUploadButton.onclick = cancelFunction;
+    element.appendChild(cancelUploadButton);
+    return element;
+  }
+
+  /* creates an audio preview element */
+  createAudioElement(cancelFunction) {
+    let cancelUploadButton, element;
+    element = document.createElement("i");
+    element.classList.add("audio-preview-icon", "file-removal");
+    cancelUploadButton = document.createElement("i");
+    cancelUploadButton.classList.add("cancel-upload-button");
+    cancelUploadButton.onclick = cancelFunction;
+    element.appendChild(cancelUploadButton);
+    return element;
   }
 }
