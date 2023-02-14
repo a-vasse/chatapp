@@ -73,9 +73,9 @@ consumer.subscriptions.create("AppearanceChannel", {
     if (!!shouldRun) {
       this.online();
       clearTimeout(timer);
-      const timeInSeconds = 5;
-      const milliseconds = 1000;
-      const timeInMilliseconds = timeInSeconds * milliseconds;
+      // changes the timeout of the user
+      const timeInSeconds = 30;
+      const timeInMilliseconds = timeInSeconds * 1000;
 
       timer = setTimeout(this.away.bind(this), timeInMilliseconds);
     }
