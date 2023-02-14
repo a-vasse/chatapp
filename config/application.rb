@@ -13,7 +13,7 @@ module Chatapp
 
     # sets user status to offline on init
     config.after_initialize do |_config|
-      User.update_all(status: USer.statuses[:offline])
+      User.update_all(status: User.statuses[:offline])
     end
 
     # Configuration for the application, engines, and railties goes here.

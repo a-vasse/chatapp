@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def broadcast_update
-    broadcast_replace_to 'user_status', partial: 'user/status', user: self
+    broadcast_replace_to 'user_status', partial: 'users/status', user: self
   end
 
   def status_to_css
