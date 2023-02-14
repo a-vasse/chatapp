@@ -1,17 +1,14 @@
 <div>
   <%= form_with(model: [@single_room, @message], remote: true, data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }) do |f| %>
     <div class="form-box">
-      <div id='attachment-previews'
-        data-controller='message-preview'
-        data-action='message-preview#preview'>
-      </div>
+      <div id='attachment-previews' data-controller='message-preview' data-action='message-preview#preview'></div>
       <%= f.text_field :body, id: 'chat-text', autocomplete: 'off', class:"input-box" %>
-        <div class='image-upload'>
-          <label for='message_attachments'>
-            <i class="upload-button">+</i>
-          </label>
-          <%= f.file_field(:attachments, multiple: true, data:{controller: "message-preview", action:"change->message-preview#preview"}) %>
-        </div>
+      <div class='image-upload'>
+        <label for='message_attachments'>
+          <i class="upload-button">+</i>
+        </label>
+        <%= f.file_field(:attachments, multiple: true, data:{controller: "message-preview", action:"change->message-preview#preview"}) %>
+      </div>
       <%= f.submit "Send", data: {disable_with: false, controller: "message-preview", action: "click->message-preview#clearPreviews"}, class: "select-button" %>
     </div>
   <% end %>
