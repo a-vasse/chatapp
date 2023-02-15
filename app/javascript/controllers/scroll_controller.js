@@ -1,8 +1,12 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  connect() {
 
+  initialize() {
+    this.resetScrollWihthoutThreshold(messages);
+  }
+
+  connect() {
     //Replaces old "DomNodeInserted" with "MutationObserver"
     //Created MutationObserver object and passed the resetScroll function as its callback.
     //Called the observe method on the observer and pass messages as its target.
@@ -11,7 +15,6 @@ export default class extends Controller {
     const messages = document.getElementById("messages");
     const observer = new MutationObserver(this.resetScroll);
     observer.observe(messages, { childList: true });
-    this.resetScroll(messages);
   }
 
   disconnect() {
@@ -19,6 +22,14 @@ export default class extends Controller {
   }
 
   resetScroll() {
+    const bottomOfScroll = messages.scrollHeight - messages.clientHeight;
+    const upperScrollThreshold = bottomOfScroll - 500;
+    if (messages.scrollTop > upperScrollThreshold) {
+      this.resetScrollWihthoutThreshold(messages);
+    }
+  }
+
+  resetScrollWihthoutThreshold(messages) {
     messages.scrollTop = messages.scrollHeight - messages.clientHeight;
   }
 }

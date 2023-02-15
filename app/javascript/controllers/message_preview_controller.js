@@ -19,6 +19,16 @@ export default class extends Controller {
       const reader = new FileReader();
       this.createDisplayPreviewElements(file, reader);
     }
+    this.toggleVisibility();
+  }
+
+  /**
+   * Toggles visibility of preview div
+   */
+
+  toggleVisibility() {
+    let preview = document.getElementById("attachment-previews")
+    preview.classList.toggle("display-none");
   }
 
   /**
@@ -161,6 +171,10 @@ export default class extends Controller {
     target.parentNode.removeChild(target);
     filesArray.forEach((file) => dataTransfer.items.add(file));
     fileInput.files = dataTransfer.files;
+
+    if (filesArray.length === 0) {
+      this.toggleVisibility();
+    }
   }
 
   /**
@@ -168,5 +182,8 @@ export default class extends Controller {
    */
   clearPreviews() {
     document.getElementById("attachment-previews").innerHTML = "";
+
+    let preview = document.getElementById("attachment-previews")
+    preview.classList.add("display-none");
   }
 }
