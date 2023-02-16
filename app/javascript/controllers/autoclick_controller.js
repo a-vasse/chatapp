@@ -28,7 +28,7 @@ export default class Autoclick extends Controller {
         Autoclick.topMessage.scrollIntoView({ behavior: "auto", block: "end",});
         console.log("scrolling");
         Autoclick.throttling = false;
-      }, 250);
+      }, 500);
     }
   }
 
