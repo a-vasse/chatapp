@@ -67,7 +67,7 @@ export default class extends Controller {
         element = this.createImageElement(cancelFunction, reader);
         break;
       case "video/mp4":
-        case "video/quicktime":
+      case "video/quicktime":
           element = this.createVideoElement(cancelFunction);
           break;
       case "audio/mpeg":
@@ -97,7 +97,8 @@ export default class extends Controller {
     element.classList.add("attachment-image-container", "file-removal");
     element.appendChild(image);
     cancelUploadButton = document.createElement("i");
-    cancelUploadButton.classList.add("bi","bi-x-circle-fill","cancel-upload-button");
+    cancelUploadButton.classList.add("cancel-upload-button");
+    cancelUploadButton.appendChild(document.createTextNode("-"));
     cancelUploadButton.onclick = cancelFunction;
     element.appendChild(cancelUploadButton);
     return element;
@@ -112,9 +113,10 @@ export default class extends Controller {
   createAudioElement(cancelFunction) {
     let cancelUploadButton, element;
     element = document.createElement("i");
-    element.classList.add("bi", "bi-file-earmark-music-fill", "audio-preview-icon", "file-removal");
+    element.classList.add("file-removal");
     cancelUploadButton = document.createElement("i");
-    cancelUploadButton.classList.add("bi", "bi-x-circle-fill", "cancel-upload-button");
+    cancelUploadButton.classList.add("cancel-upload-button");
+    cancelUploadButton.appendChild(document.createTextNode("-"));
     cancelUploadButton.onclick = cancelFunction;
     element.appendChild(cancelUploadButton);
     return element;
@@ -128,9 +130,10 @@ export default class extends Controller {
   createVideoElement(cancelFunction) {
     let cancelUploadButton, element;
     element = document.createElement("i");
-    element.classList.add("bi", "bi-file-earmark-play-fill", "video-preview-icon", "file-removal");
+    element.classList.add("file-removal");
     cancelUploadButton = document.createElement("i");
-    cancelUploadButton.classList.add( "bi", "bi-x-circle-fill", "cancel-upload-button");
+    cancelUploadButton.classList.add( "cancel-upload-button");
+    cancelUploadButton.appendChild(document.createTextNode("-"));
     cancelUploadButton.onclick = cancelFunction;
     element.appendChild(cancelUploadButton);
     return element;
@@ -144,9 +147,10 @@ export default class extends Controller {
   createDefaultElement(cancelFunction) {
     let cancelUploadButton, element;
     element = document.createElement("i");
-    element.classList.add("bi", "bi-file-check-fill", "file-preview-icon", "file-removal");
+    element.classList.add("file-removal");
     cancelUploadButton = document.createElement("i");
-    cancelUploadButton.classList.add( "bi", "bi-x-circle-fill", "cancel-upload-button");
+    cancelUploadButton.classList.add("cancel-upload-button");
+    cancelUploadButton.appendChild(document.createTextNode("-"));
     cancelUploadButton.onclick = cancelFunction;
     element.appendChild(cancelUploadButton);
     return element;
