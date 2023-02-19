@@ -132,8 +132,10 @@ export default class extends Controller {
    */
   createVideoElement(cancelFunction) {
     let cancelUploadButton, element;
-    element = document.createElement("i");
-    element.classList.add("file-removal");
+    const image = document.createElement("img");
+    image.classList.add("preview-video");
+    element = document.createElement("div");
+    element.classList.add("attachment-image-container", "file-removal");
     cancelUploadButton = document.createElement("i");
     cancelUploadButton.classList.add( "cancel-upload-button");
     cancelUploadButton.appendChild(document.createTextNode("-"));
@@ -149,8 +151,10 @@ export default class extends Controller {
    */
   createDefaultElement(cancelFunction) {
     let cancelUploadButton, element;
-    element = document.createElement("i");
-    element.classList.add("file-removal");
+    const image = document.createElement("img");
+    image.classList.add("preview-file");
+    element = document.createElement("div");
+    element.classList.add("attachment-image-container", "file-removal");
     cancelUploadButton = document.createElement("i");
     cancelUploadButton.classList.add("cancel-upload-button");
     cancelUploadButton.appendChild(document.createTextNode("-"));
