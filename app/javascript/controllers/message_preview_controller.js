@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
-import { image_pack_tag } from "@rails/webpacker"
+
 /**
  * This controller is responsible for displaying the message preview.
  * @class MessagePreviewController
@@ -112,11 +112,8 @@ export default class extends Controller {
    */
   createAudioElement(cancelFunction) {
     let cancelUploadButton, element;
-    // element = document.createElement("i");
-    // element.classList.add("file-removal");
-
-    const image = image_pack_tag('audiofile.jpg')
-    image.classList.add("preview-image");
+    const image = document.createElement("img");
+    image.classList.add("preview-audio");
     element = document.createElement("div");
     element.classList.add("attachment-image-container", "file-removal");
     element.appendChild(image);
