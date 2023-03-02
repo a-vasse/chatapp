@@ -4,7 +4,7 @@ class Room < ApplicationRecord
   after_create_commit { broadcast_if_public }
   has_many :messages
   has_many :participants, dependent: :destroy
-  has_many :joinables, depedent: :destroy
+  has_many :joinables, dependent: :destroy
   has_many :joined_users, through: :joinables, source: :user
 
   def broadcast_if_public
