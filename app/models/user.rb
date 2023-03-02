@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   after_commit :add_default_avatar, on: %i[create update]
 
-  # after_initialize :set_default_role, if: :new_record?
+  after_initialize :set_default_role, if: :new_record?
 
   attr_accessor :current_password
 
@@ -44,9 +44,9 @@ class User < ApplicationRecord
 
   private
 
-  # def set_default_role
-  #   self.role ||= :user
-  # end
+  def set_default_role
+    self.role ||= :user
+  end
 
   def add_default_avatar
     return if avatar.attached?
