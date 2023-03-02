@@ -9,10 +9,15 @@ class User < ApplicationRecord
   after_update_commit { broadcast_update }
   has_many :messages
   has_one_attached :avatar
+  has_many :joinables, dependent: :destroy
+  has_many :joined_rooms, through: :joinables, source: :room
 
+  enum role: %i[user_admin]
   enum status: %i[offline away online]
 
   after_commit :add_default_avatar, on: %i[create update]
+
+  after_initialise :set_default_role, if: :new_record?
 
   attr_accessor :current_password
 
@@ -38,6 +43,10 @@ class User < ApplicationRecord
   end
 
   private
+  
+  def set_default_role
+    self.role ||= :user
+  end
 
   def add_default_avatar
     return if avatar.attached?
